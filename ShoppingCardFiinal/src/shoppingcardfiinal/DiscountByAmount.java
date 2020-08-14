@@ -12,16 +12,19 @@ package shoppingcardfiinal;
 public class DiscountByAmount extends Discount{
 
 
+    public DiscountByAmount(double a) {
 
-	public DiscountByAmount(double a) {
+        super(a);
+    }
 
-		super(a);
-	}
-	@Override
+    @Override
 
-	public double applyDiscount(double price) {
-		double new_price = price-this.amount;
-		if(new_price < 0)
-			return 0;
-		else
-			return new_price;}}
+    public double applyDiscount(double price) {
+        double new_price = price - this.amount;
+        if (new_price < 0) {
+            return 0;
+        } else {
+            return new_price;
+        }
+    }
+}

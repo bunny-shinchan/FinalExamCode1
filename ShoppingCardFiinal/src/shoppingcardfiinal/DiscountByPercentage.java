@@ -12,22 +12,21 @@ package shoppingcardfiinal;
 
 public class DiscountByPercentage extends Discount{
 
+    public DiscountByPercentage(double a) {
 
+        super(a);
 
-	public DiscountByPercentage(double a) {
+    }
 
-		super(a);
+    @Override
 
-	}
-	@Override
+    public double applyDiscount(double price) {
 
-	public double applyDiscount(double price) {
+        double amountToSub = (100.0 / price) * this.amount;
 
-		double amountToSub = (100.0/price)*this.amount;
+        return price - amountToSub;
 
-		return price - amountToSub;
-
-	}
+    }
 
 
 

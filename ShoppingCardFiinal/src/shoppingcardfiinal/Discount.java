@@ -12,14 +12,18 @@ package shoppingcardfiinal;
 
 
 public abstract class Discount {
-	protected double amount;
-	enum Type{
+	   protected double amount;
 
-		AMOUNT,
-		PERCENTAGE}
-	
-	public Discount(double a){
+    enum Type {
 
-		amount = a;}
-	public abstract double applyDiscount(double price);
+        AMOUNT,
+        PERCENTAGE
+    }
+
+    public Discount(double a) {
+
+        amount = a;
+    }
+
+    public abstract double applyDiscount(double price);
 }

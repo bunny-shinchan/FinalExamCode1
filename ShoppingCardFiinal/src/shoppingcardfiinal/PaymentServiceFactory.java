@@ -11,23 +11,24 @@ package shoppingcardfiinal;
  */
 public class PaymentServiceFactory {
     private static PaymentServiceFactory instance = null;
-    
-    private PaymentServiceFactory( ) {
-        
+
+    private PaymentServiceFactory() {
+
     }
-    
-    public PaymentService getPaymentService( PaymentServiceType type ) {
-        switch ( type ) {
-            case CREDIT : return new CreditPaymentService( );
-            case DEBIT : return new DebitPaymentService( );
+
+    public PaymentService getPaymentService(PaymentServiceType type) {
+        switch (type) {
+            case CREDIT:
+                return new CreditPaymentService();
+            case DEBIT:
+                return new DebitPaymentService();
         }
         return null;
     }
-    
-    
-    public static PaymentServiceFactory getInstance( ) {
-        if ( instance == null ) {
-            instance = new PaymentServiceFactory( );
+
+    public static PaymentServiceFactory getInstance() {
+        if (instance == null) {
+            instance = new PaymentServiceFactory();
         }
         return instance;
     }
