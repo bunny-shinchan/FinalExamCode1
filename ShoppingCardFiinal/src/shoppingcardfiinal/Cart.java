@@ -16,8 +16,7 @@ public class Cart {
 
     private PaymentService service;
     private int cartSize;
-    // Usman Khan
-    //using aggregation
+    
 
     private Discount discount = null;
 

@@ -17,11 +17,9 @@ public abstract class Discount {
 
 		AMOUNT,
 		PERCENTAGE}
-	//Usman K, has constructor
+	
 	public Discount(double a){
 
 		amount = a;}
 	public abstract double applyDiscount(double price);
-
-
 }
